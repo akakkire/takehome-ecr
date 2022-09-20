@@ -1,0 +1,9 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Elastic Container Registory Repository using Cloudformation
+Resources:
+  ecrRepo:
+    Type: AWS::ECR::Repository
+    Properties: 
+      RepositoryName: takehome-ecr
+      ImageScanningConfiguration: 
+        ScanOnPush: false
