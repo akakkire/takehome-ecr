@@ -1,8 +1,8 @@
 pipeline {
     agent any
     stages {
-        stage('ECSCluster') {
+        stage('ECR') {
             steps {
-            sh "aws cloudformation create-stack --stack-name takehome-ecs --template-body file://takehome_ecs.yaml --region 'us-east-1'"
+            sh "aws cloudformation create-stack --stack-name takehome-ecr --template-body file://takehome_ecr.yaml --region 'us-east-1'"
             }
         }
